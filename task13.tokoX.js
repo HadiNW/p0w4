@@ -1,10 +1,65 @@
 function countProfit(shoppers) {
-  let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
-                     ['Baju Zoro', 500000, 2],
-                     ['Sweater Uniklooh', 175000, 1]
-                   ];
+  var sepatu = [];
+    var baju = [];  
+    var sweater = [];
+    var totalSweater = 0;
+    var totalSepatu = 0;
+    var totalBaju = 0;
 
-  // you can only write your code here!
+  let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
+                       ['Baju Zoro', 500000, 2],
+                       ['Sweater Uniklooh', 175000, 1]
+                     ];      
+    
+    if(shoppers.length === 0) return [];
+    for(var i = 0; i < shoppers.length; i++){
+        if(shoppers[i].product === 'Sepatu Stacattu'){
+
+            if(listBarang[0][2] - shoppers[i].amount >= 0){
+                listBarang[0][2] = listBarang[0][2] - shoppers[i].amount;
+                totalSepatu += listBarang[0][1] * shoppers[i].amount;
+                sepatu.push(shoppers[i].name); 
+            }
+
+        } else if (shoppers[i].product === 'Baju Zoro'){
+
+            if(listBarang[1][2] - shoppers[i].amount >= 0){
+                listBarang[1][2] = listBarang[1][2] - shoppers[i].amount;
+                totalBaju += listBarang[1][1] * shoppers[i].amount;
+                baju.push(shoppers[i].name);
+            }
+
+        }else {
+            if (listBarang[2][2] - shoppers[i].amount >= 0){
+                listBarang[2][2] = listBarang[2][2] - shoppers[i].amount;
+                totalSweater += listBarang[2][1] * shoppers[i].amount;
+                sweater.push(shoppers[i].name);
+            }
+        }
+    }
+
+    var result = [
+        {
+            product : listBarang[0][0],
+            shoppers : sepatu,
+            leftOver : listBarang[0][2],
+            totalProfit : totalSepatu
+        },
+        {
+            product : listBarang[1][0],
+            shoppers : baju,
+            leftOver : listBarang[1][2],
+            totalProfit : totalBaju
+        },
+        {
+            product : listBarang[2][0],
+            shoppers : sweater,
+            leftOver : listBarang[2][2],
+            totalProfit : totalSweater
+        }
+    ];
+    
+return result;
 }
 
 // TEST CASES
