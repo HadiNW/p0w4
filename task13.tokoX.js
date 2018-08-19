@@ -1,17 +1,21 @@
 function countProfit(shoppers) {
-    var sepatu = [];
-    var baju = [];  
-    var sweater = [];
-    var totalSweater = 0;
-    var totalSepatu = 0;
-    var totalBaju = 0;
-
-  let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
+   
+    let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
                        ['Baju Zoro', 500000, 2],
                        ['Sweater Uniklooh', 175000, 1]
-                     ];      
+                     ]; 
+     
+
+    var sepatu = [];
+    var baju = [];  
+    var sweater = [];  
     
-    if(shoppers.length === 0) return [];
+    if(shoppers.length === 0){
+      return [];
+    } 
+    var totalSweater = 0;
+    var totalSepatu = 0;
+    var totalBaju = 0;  
     for(var i = 0; i < shoppers.length; i++){
         if(shoppers[i].product === 'Sepatu Stacattu'){
 
