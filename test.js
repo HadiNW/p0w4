@@ -1,11 +1,11 @@
-// var cup = {
-//     type : 'Coffe Cup',
-//     material : 'Plastic',
-//     colour : 'White',
-//     dimension: 0.8,
-//     diameter: 80,
-//     height: 92
-//     }
+var cup = {
+    type : 'Coffe Cup',
+    material : 'Plastic',
+    colour : 'White',
+    dimension: 0.8,
+    diameter: 80,
+    height: 92
+    }
 //     //delete cup.diameter
 //     delete cup.haha
 //     console.log(cup)
@@ -20,4 +20,12 @@ var arr = [
     ['f', 5]
 ]
 
-console.log(arr[0][0])
+// console.log(arr[0][0])
+
+cup.halo = 'halo'
+console.log(cup)
+console.log(arr)
+arr.push('a');
+console.log(arr)
+arr.push('b');
+console.log(arr)
