@@ -1,5 +1,5 @@
 function countProfit(shoppers) {
-  var sepatu = [];
+    var sepatu = [];
     var baju = [];  
     var sweater = [];
     var totalSweater = 0;
@@ -38,7 +38,7 @@ function countProfit(shoppers) {
         }
     }
 
-    var result = [
+    var results = [
         {
             product : listBarang[0][0],
             shoppers : sepatu,
@@ -59,7 +59,9 @@ function countProfit(shoppers) {
         }
     ];
     
-return result;
+
+  return results;
+
 }
 
 // TEST CASES
