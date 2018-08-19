@@ -20,15 +20,6 @@ function countProfit(shoppers) {
                 totalSepatu += listBarang[0][1] * shoppers[i].amount;
                 sepatu.push(shoppers[i].name); 
             }
-
-        } else if (shoppers[i].product === 'Baju Zoro'){
-
-            if(listBarang[1][2] - shoppers[i].amount >= 0){
-                listBarang[1][2] = listBarang[1][2] - shoppers[i].amount;
-                totalBaju += listBarang[1][1] * shoppers[i].amount;
-                baju.push(shoppers[i].name);
-            }
-
         }else {
             if (listBarang[2][2] - shoppers[i].amount >= 0){
                 listBarang[2][2] = listBarang[2][2] - shoppers[i].amount;
